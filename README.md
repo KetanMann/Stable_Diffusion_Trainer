@@ -18,7 +18,10 @@ Contain a single script to train stable diffusion from scratch. Easy to modify w
 Cloning Repo
 ```bash
 !git clone https://github.com/KetanMann/Stable_Diffusion_Trainer
+```
+```
 cd Stable_Diffusion_Trainer
+```
 ```
 1. Install dependencies:
 ```bash
