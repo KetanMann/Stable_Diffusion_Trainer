@@ -15,7 +15,11 @@ Contain a single script to train stable diffusion from scratch. Easy to modify w
 
 
 ## Usage
-
+Cloning Repo
+```bash
+!git clone https://github.com/KetanMann/Stable_Diffusion_Trainer
+cd Stable_Diffusion_Trainer
+```
 1. Install dependencies:
 ```bash
 pip install -r requirements.txt
@@ -31,12 +35,27 @@ You can use local file or some dataset at hugging face hub.(See example implemen
 3. Run the training script:
 
 ```bash
-
-!git clone 
-cd
-
-```
-To run the training script with all the hyperparameters
-```bash
+!accelerate launch --multi_gpu blessing.py \
+  --dataset_name="m1guelpf/nouns" \
+  --resolution=64 \
+  --output_dir=/kaggle/working/nouns_models \
+  --train_batch_size=32 \
+  --dataloader_num_workers=4 \
+  --eval_batch_size=1 \
+  --num_epochs=20000000 \
+  --use_ema \
+  --gradient_accumulation_steps=4 \
+  --learning_rate=3e-5 \
+  --lr_warmup_steps=2000 \
+  --mixed_precision="no" \
+  --save_images_epoch=1 \
+  --ddpm_beta_schedule="squaredcos_cap_v2" \
+  --checkpointing_steps=500 \
+  --resume_from_checkpoint="latest" \
+  --prediction_type="v_prediction" \
+  --logger="wandb" \
+  --image_column="image" \
+  --caption_column="text" \
+  --ddpm_num_inference_steps=999
 
 ```
