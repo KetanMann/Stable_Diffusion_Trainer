@@ -1,0 +1,8 @@
+tensorflow
+diffusers
+datasets
+transformers
+accelerate==0.21.0
+ftfy
+pyarrow==9.0.0
+lpips
