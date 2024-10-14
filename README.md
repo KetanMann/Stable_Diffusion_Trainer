@@ -38,7 +38,7 @@ You can use local file or some dataset at hugging face hub.(See below implementa
 
 ```bash
 !accelerate launch --multi_gpu stable_diffusion_script.py \
-  --dataset_name="m1guelpf/nouns" \ #Yours Dataset name / Path
+  --dataset_name="m1guelpf/nouns" \ #Yours Dataset name or local dataset path
   --resolution=64 \
   --output_dir=/kaggle/working/nouns_models \
   --train_batch_size=32 \
