@@ -63,4 +63,4 @@ You can use local file or some dataset at hugging face hub.(See example implemen
 ```
 Some sampling information;- 
 I trained an SD model to generate 64x64 images from 8x8 noisy latents. Here is the denoising process and corresponding latent space images.
-![8x8to64x64][8x8to64x64.jpg]
+![8x8to64x64](8x8to64x64.png)
