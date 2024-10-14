@@ -55,7 +55,7 @@ You can use local file or some dataset at hugging face hub.(See below implementa
   --checkpointing_steps=500 \
   --resume_from_checkpoint="latest" \
   --prediction_type="v_prediction" \
-  --logger="wandb" \
+#  --logger="wandb" \
   --image_column="image" \
   --caption_column="text" \
   --ddpm_num_inference_steps=999
