@@ -19,16 +19,15 @@ Cloning Repo
 ```bash
 !git clone https://github.com/KetanMann/Stable_Diffusion_Trainer
 ```
-```
+```bash
 cd Stable_Diffusion_Trainer
-```
 ```
 1. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 and source install of diffusers
-```
+```bash
 pip install git+https://github.com/huggingface/diffusers 
 ```
 2. Prepare your dataset
