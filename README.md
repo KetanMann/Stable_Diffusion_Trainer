@@ -1,5 +1,5 @@
 # Stable_Diffusion_Trainer: Text to Image Stable Diffusion model(train from scratch or finetune from a checkpoint)
-Contain a single script to train stable diffusion from scratch. Easy to modify with advanced libraries support.
+Contain a single script to train stable diffusion from scratch. Easy to modify with advanced library support. This script was modified from an unconditional image generation script from diffusers. 
 
 ## Key Features
 
@@ -32,13 +32,13 @@ pip install git+https://github.com/huggingface/diffusers
 ```
 2. Prepare your dataset
 See dataset dataloader documentation from huggingface
-You can use local file or some dataset at hugging face hub.(See example implementation at the end.)
+You can use local file or some dataset at hugging face hub.(See below implementation)
 
 3. Run the training script:
 
 ```bash
 !accelerate launch --multi_gpu stable_diffusion_script.py \
-  --dataset_name="m1guelpf/nouns" \
+  --dataset_name="m1guelpf/nouns" \ #Yours Dataset name / Path
   --resolution=64 \
   --output_dir=/kaggle/working/nouns_models \
   --train_batch_size=32 \
