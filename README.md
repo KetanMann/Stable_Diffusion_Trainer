@@ -13,6 +13,7 @@ Contain a single script to train stable diffusion from scratch. Easy to modify w
 - Multi GPU support
 - Mixed precision support with accelerate
 
+![TrainingProgress](TrainingProgress.png)
 
 ## Usage
 Cloning Repo
